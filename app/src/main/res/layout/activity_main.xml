@@ -8,23 +8,36 @@
     tools:context=".MainActivity">
 
     <EditText
+
         android:id="@+id/text_number"
-        android:layout_width="369dp"
-        android:layout_height="140dp"
+        android:autofillHints="username"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
         android:layout_marginHorizontal="20sp"
-        android:layout_marginTop="90dp"
-        android:autofillHints="no"
+        android:layout_marginBottom="-50dp"
         android:backgroundTint="@color/dark_green"
         android:hint="@string/key_0"
+        android:gravity="end"
         android:inputType="number"
         android:textColor="@color/dark_green"
         android:textColorHint="@color/dark_green"
         android:textSize="80sp"
-        app:layout_constraintTop_toTopOf="@+id/include_button"
-        tools:layout_editor_absoluteX="21dp" />
+        app:layout_constraintBottom_toTopOf="@+id/include_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/include_button"
-        layout="@layout/button" />
+        layout="@layout/button"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_number"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/text_number"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
