@@ -4,10 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_g7aace4f2a_1920"
     tools:context=".MainActivity">
 
-    <include layout="@layout/button" />
+    <EditText
+        android:id="@+id/text_number"
+        android:layout_width="369dp"
+        android:layout_height="140dp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="90dp"
+        android:autofillHints="no"
+        android:backgroundTint="@color/dark_green"
+        android:hint="@string/key_0"
+        android:inputType="number"
+        android:textColor="@color/dark_green"
+        android:textColorHint="@color/dark_green"
+        android:textSize="80sp"
+        app:layout_constraintTop_toTopOf="@+id/include_button"
+        tools:layout_editor_absoluteX="21dp" />
 
-
+    <include
+        android:id="@+id/include_button"
+        layout="@layout/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
