@@ -7,7 +7,7 @@
     android:background="@drawable/background_g7aace4f2a_1920"
     tools:context=".MainActivity">
 
-    <EditText
+    <TextView
 
         android:id="@+id/text_number"
         android:autofillHints="username"
@@ -15,10 +15,8 @@
         android:layout_height="120dp"
         android:layout_marginHorizontal="20sp"
         android:layout_marginBottom="-50dp"
-        android:backgroundTint="@color/dark_green"
         android:hint="@string/key_0"
         android:gravity="end"
-        android:inputType="number"
         android:textColor="@color/dark_green"
         android:textColorHint="@color/dark_green"
         android:textSize="80sp"
