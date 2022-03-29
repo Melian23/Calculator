@@ -2,7 +2,8 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="threeBTN">
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -19,7 +20,21 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="resetBTN"
             android:text="@string/reset"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/special_elite"
+            android:onClick="clearBTN"
+            android:text="@string/clear"
             android:textSize="30sp" />
 
         <Button
@@ -31,19 +46,8 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="percentBTN"
             android:text="@string/percent"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/root"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/special_elite"
-            android:text="@string/root"
             android:textSize="30sp" />
 
         <Button
@@ -55,6 +59,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="divBTN"
             android:text="@string/div"
             android:textSize="30sp" />
 
@@ -67,6 +72,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="sevenBTN"
             android:text="@string/seven"
             android:textSize="30sp" />
 
@@ -79,6 +85,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="eightBTN"
             android:text="@string/eight"
             android:textSize="30sp" />
 
@@ -91,6 +98,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="nineBTN"
             android:text="@string/nine"
             android:textSize="30sp" />
 
@@ -103,6 +111,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="multBTN"
             android:text="@string/mult"
             android:textSize="30sp" />
 
@@ -115,6 +124,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="fourBTN"
             android:text="@string/four"
             android:textSize="30sp" />
 
@@ -127,6 +137,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="fiveBTN"
             android:text="@string/five"
             android:textSize="30sp" />
 
@@ -139,6 +150,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="sixBTN"
             android:text="@string/six"
             android:textSize="30sp" />
 
@@ -151,6 +163,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="minusBTN"
             android:text="@string/minus"
             android:textSize="30sp" />
 
@@ -163,6 +176,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="oneBTN"
             android:text="@string/one"
             android:textSize="30sp" />
 
@@ -175,6 +189,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="twoBTN"
             android:text="@string/two"
             android:textSize="30sp" />
 
@@ -187,6 +202,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="threeBTN"
             android:text="@string/three"
             android:textSize="30sp" />
 
@@ -199,6 +215,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="plusBTN"
             android:text="@string/plus"
             android:textSize="30sp" />
 
@@ -211,6 +228,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="plusMinusBTN"
             android:text="@string/plus_minus"
             android:textSize="30sp" />
 
@@ -223,6 +241,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="zeroBTN"
             android:text="@string/zero"
             android:textSize="30sp" />
 
@@ -235,6 +254,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="dotBTN"
             android:text="@string/dot"
             android:textSize="30sp" />
 
@@ -247,6 +267,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/special_elite"
+            android:onClick="equalBTN"
             android:text="@string/result"
             android:textSize="30sp" />
 

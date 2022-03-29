@@ -7,7 +7,7 @@
     android:background="@drawable/background_g7aace4f2a_1920"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
 
         android:id="@+id/text"
         android:layout_width="0dp"
@@ -16,10 +16,11 @@
         android:layout_marginBottom="-50dp"
         android:autofillHints="username"
         android:gravity="end"
-        android:hint="@string/zero"
+        android:text="@string/text"
+        android:backgroundTint="@color/dark_green"
         android:textColor="@color/dark_green"
         android:textColorHint="@color/dark_green"
-        android:textSize="80sp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
