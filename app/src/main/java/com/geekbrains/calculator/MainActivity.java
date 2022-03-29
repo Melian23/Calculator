@@ -1,5 +1,14 @@
 package com.geekbrains.calculator;
 
+/***
+ * TODO: ограничить количество введенных символов на дисплее
+ * после нажатия на плюсминус при пустом дисплее - вылетает программа
+ * чтоб не вводился 0 первым числом
+ * число показывалось без точки если оно целое
+ * ночная тема
+ * ланшафтная ориентация калькулятора с сохранением состояния
+ */
+
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
@@ -7,7 +16,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.mariuszgromada.math.mxparser.Expression; // библиотека для арифметических вычислений
+import org.mariuszgromada.math.mxparser.Expression;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -101,7 +110,9 @@ public class MainActivity extends AppCompatActivity {
     public void plusMinusBTN(View view) {
         int cursorPos = display.getSelectionStart(); // определяем положение курсора и записываем его в переменную
 
+
         SpannableStringBuilder set = (SpannableStringBuilder) display.getText();
+        int textLen = set.length();
         char c = set.charAt(0); //в переменную с записываем первый символ строки класса SpannableStringBuilder
 
         //если минус уже стоит в начале, то удаляем первый элемент

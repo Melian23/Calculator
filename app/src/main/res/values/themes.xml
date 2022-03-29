@@ -14,10 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="materialButtonStyle">@style/systemButtonStyle</item> <!-- если используете MaterialComponents -->
-        <item name="buttonStyle">@style/systemButtonStyle</item> <!-- если используете AppCompat  -->
-    </style>
-    <style name="systemButtonStyle" parent="Widget.MaterialComponents.Button">
-        <item name="android:background">@drawable/button_shape</item>
+        <item name="materialButtonStyle">@style/CalcButton</item>
     </style>
 </resources>
