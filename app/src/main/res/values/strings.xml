@@ -22,4 +22,6 @@
     <string name="reset">C</string>
     <string name="result">=</string>
     <string name="text"></string>
+    <string name="night">night</string>
+    <string name="day">day</string>
 </resources>

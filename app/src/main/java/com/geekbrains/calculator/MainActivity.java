@@ -9,6 +9,7 @@ package com.geekbrains.calculator;
  * ланшафтная ориентация калькулятора с сохранением состояния
  */
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
@@ -21,10 +22,26 @@ import org.mariuszgromada.math.mxparser.Expression;
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
+    private static final String THEME_KEY = "THEME_KEY";
+    private static final String THEME_NIGHT = "THEME_NIGHT";
+    private static final String THEME_DAY = "THEME_DAY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
+
+        String theme = sharedPreferences.getString(THEME_KEY, THEME_DAY);
+
+        switch (theme){
+            case THEME_DAY:
+                setTheme(R.style.Theme_Calculator);
+                break;
+            default: THEME_NIGHT:
+                setTheme(R.style.Theme_Calculator_V2);
+                break;
+        }
         setContentView(R.layout.activity_main);
 
         display = findViewById(R.id.text);
@@ -37,6 +54,28 @@ public class MainActivity extends AppCompatActivity {
                 if (getString(R.string.text).equals(display.getText().toString())) {
                     display.setText(""); // то при нажании на него имеющийся там текст будет меняться на пустой дисплей
                 }
+            }
+        });
+
+        findViewById(R.id.theme_day).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                sharedPreferences.edit()
+                        .putString(THEME_KEY, THEME_DAY)
+                        .apply();
+                recreate();
+            }
+        });
+
+        findViewById(R.id.theme_night).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                sharedPreferences.edit()
+                        .putString(THEME_KEY, THEME_NIGHT)
+                        .apply();
+                recreate();
             }
         });
     }
@@ -173,4 +212,7 @@ public class MainActivity extends AppCompatActivity {
     public void percentBTN(View view) {
         updateText("%");
     }
+
+
 }
+

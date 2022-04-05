@@ -4,18 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_g7aace4f2a_1920"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/text"
-        style="@style/EditText"
         android:text="@string/text"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/MyTextStyle" />
 
     <FrameLayout
         android:id="@+id/button"
@@ -30,12 +28,11 @@
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="30dp"
             android:columnCount="4">
 
             <Button
                 android:id="@+id/reset"
-                style="@style/CalcButton.Reset"
                 android:onClick="resetBTN"
                 android:text="@string/reset"
                 android:textSize="30sp" />
@@ -57,19 +54,16 @@
 
             <Button
                 android:id="@+id/seven"
-                style="@style/CalcButton.Num"
                 android:onClick="sevenBTN"
                 android:text="@string/seven" />
 
             <Button
                 android:id="@+id/eight"
-                style="@style/CalcButton.Num"
                 android:onClick="eightBTN"
                 android:text="@string/eight" />
 
             <Button
                 android:id="@+id/nine"
-                style="@style/CalcButton.Num"
                 android:onClick="nineBTN"
                 android:text="@string/nine" />
 
@@ -80,43 +74,36 @@
 
             <Button
                 android:id="@+id/four"
-                style="@style/CalcButton.Num"
                 android:onClick="fourBTN"
                 android:text="@string/four" />
 
             <Button
                 android:id="@+id/five"
-                style="@style/CalcButton.Num"
                 android:onClick="fiveBTN"
                 android:text="@string/five" />
 
             <Button
                 android:id="@+id/six"
-                style="@style/CalcButton.Num"
                 android:onClick="sixBTN"
                 android:text="@string/six" />
 
             <Button
                 android:id="@+id/minus"
-                style="@style/CalcButton"
                 android:onClick="minusBTN"
                 android:text="@string/minus" />
 
             <Button
                 android:id="@+id/one"
-                style="@style/CalcButton.Num"
                 android:onClick="oneBTN"
                 android:text="@string/one" />
 
             <Button
                 android:id="@+id/two"
-                style="@style/CalcButton.Num"
                 android:onClick="twoBTN"
                 android:text="@string/two" />
 
             <Button
                 android:id="@+id/three"
-                style="@style/CalcButton.Num"
                 android:onClick="threeBTN"
                 android:text="@string/three" />
 
@@ -132,7 +119,6 @@
 
             <Button
                 android:id="@+id/zero"
-                style="@style/CalcButton.Num"
                 android:onClick="zeroBTN"
                 android:text="@string/zero" />
 
@@ -147,5 +133,17 @@
                 android:text="@string/result" />
 
         </GridLayout>
+
+        <Button
+            android:id="@+id/theme_night"
+            style="@style/ButtonNight"
+            android:text="@string/night" />
+
+        <Button
+            android:id="@+id/theme_day"
+            style="@style/ButtonNight"
+            android:text="@string/day"
+            android:layout_marginStart="200dp"/>
+
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
