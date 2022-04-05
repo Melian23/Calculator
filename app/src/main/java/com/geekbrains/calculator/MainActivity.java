@@ -1,11 +1,8 @@
 package com.geekbrains.calculator;
 
 /***
- * TODO: ограничить количество введенных символов на дисплее
- * после нажатия на плюсминус при пустом дисплее - вылетает программа
- * чтоб не вводился 0 первым числом
+ * TODO:
  * число показывалось без точки если оно целое
- * ночная тема
  * ланшафтная ориентация калькулятора с сохранением состояния
  */
 
@@ -21,10 +18,10 @@ import org.mariuszgromada.math.mxparser.Expression;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText display;
     private static final String THEME_KEY = "THEME_KEY";
     private static final String THEME_NIGHT = "THEME_NIGHT";
     private static final String THEME_DAY = "THEME_DAY";
+    private EditText display;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +29,18 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
 
-        String theme = sharedPreferences.getString(THEME_KEY, THEME_DAY);
-
-        switch (theme){
+        String theme = sharedPreferences.getString(THEME_KEY, THEME_DAY);  // по умолчанию для первого запуска светлая тема
+// выбираем сохраненную тему ранее
+        switch (theme) {
             case THEME_DAY:
                 setTheme(R.style.Theme_Calculator);
                 break;
-            default: THEME_NIGHT:
+            default:
+                THEME_NIGHT:
                 setTheme(R.style.Theme_Calculator_V2);
                 break;
         }
+
         setContentView(R.layout.activity_main);
 
         display = findViewById(R.id.text);
@@ -57,10 +56,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // выбор светлой или темной темы:
         findViewById(R.id.theme_day).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // сохраняем выбранную тему в SharedPreferences по ключу
                 sharedPreferences.edit()
                         .putString(THEME_KEY, THEME_DAY)
                         .apply();
@@ -86,22 +86,30 @@ public class MainActivity extends AppCompatActivity {
         int cursorPos = display.getSelectionStart();  // переменная в которую сохраняем текущее положение курсора
         String leftStr = oldStr.substring(0, cursorPos); // переменная в которую сохраним левую часть строки на дисплее от курсора
         String rightStr = oldStr.substring(cursorPos); // переменная в которую сохраним правую часть строки от курсора до конца
+        int textLen = display.getText().length();
 
-        //если текст на дисплее из ресурса String равно тексту на дисплее
-        if (getString(R.string.text).equals(display.getText().toString())) {
-            display.setText(addStr); // обновляем дисплей и устанавливаем текст новой строки
-        } else {
-            // если текст уже имеется на дисплее (не с ресуров) то устанавливаем текст в виде сочетания трех строк:
-            //левой строки, текущей строи (положение курсора) и правой строки
-            display.setText(String.format("%s%s%s", leftStr, addStr, rightStr));
+        if (textLen <= 9) {
+            //если текст на дисплее из ресурса String равно тексту на дисплее, т.е. еще ничего не вводили
+            if (getString(R.string.text).equals(display.getText().toString())) {
+                display.setText(addStr); // обновляем дисплей и устанавливаем текст новой строки
+            } else {
+                // если текст уже имеется на дисплее (не с ресуров) то устанавливаем текст в виде сочетания трех строк:
+                //левой строки, текущей строи (положение курсора) и правой строки
+                display.setText(String.format("%s%s%s", leftStr, addStr, rightStr));
+            }
+            display.setSelection(cursorPos + 1); //фиксируем положение курсора на один больше, чтоб курсор был в конце числа
         }
-        display.setSelection(cursorPos + 1); //фиксируем положение курсора на один больше, чтоб курсор был в конце числа
     }
 
     public void zeroBTN(View view) {
-        updateText("0");
-    }
+        int cursorPos = display.getSelectionStart(); // получили текущее состояние курсора
+        int textLen = display.getText().length();  //переменная в которую сохраним длину текста на дисплее
 
+        // если курсор не находится в самом начале и длина введенного текста не равна нулю
+        if (cursorPos != 0 && textLen != 0) {
+            updateText("0");
+        }
+    }
     public void oneBTN(View view) {
         updateText("1");
     }
@@ -148,23 +156,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void plusMinusBTN(View view) {
         int cursorPos = display.getSelectionStart(); // определяем положение курсора и записываем его в переменную
-
-
-        SpannableStringBuilder set = (SpannableStringBuilder) display.getText();
-        int textLen = set.length();
-        char c = set.charAt(0); //в переменную с записываем первый символ строки класса SpannableStringBuilder
+        int textLen = display.getText().length();
 
         //если минус уже стоит в начале, то удаляем первый элемент
-        if (c == '-') {
-            set.delete(0, 1);
-            display.setText(set); // обновляем текст на дисплее без минуса;
-            display.setSelection(cursorPos - 1); // обновляем положение курсора с учетом одного удаленного символа
+        if (cursorPos != 0 && textLen != 0) {
+            SpannableStringBuilder set = (SpannableStringBuilder) display.getText();
+            char c = set.charAt(0); //в переменную с записываем первый символ строки класса SpannableStringBuilder
 
-            //иначе добавляем с помощью метода минус в начало строки и обновляем текст и курсор
-        } else {
-            display.setSelection(0);
-            updateText("-");
-            display.setSelection(cursorPos + 1);
+            if (c == '-') {
+                set.delete(0, 1);
+                display.setText(set); // обновляем текст на дисплее без минуса;
+                display.setSelection(cursorPos - 1); // обновляем положение курсора с учетом одного удаленного символа
+                //иначе добавляем с помощью метода минус в начало строки и обновляем текст и курсор
+            } else {
+                display.setSelection(0);
+                updateText("-");
+                display.setSelection(cursorPos + 1);
+            }
         }
     }
 
@@ -212,7 +220,5 @@ public class MainActivity extends AppCompatActivity {
     public void percentBTN(View view) {
         updateText("%");
     }
-
-
 }
 
