@@ -14,5 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="materialButtonStyle">@style/CalcButton.V2</item>
+        <item name="editTextColor">@style/MyTextStyle.V2</item>
     </style>
 </resources>

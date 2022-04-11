@@ -1,16 +1,21 @@
 package com.geekbrains.calculator;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChangeThemeActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public static final String PREF_THEME = "key_theme";
     private static final String PREF_NAME = "key";
-    private static final String PREF_THEME = "key_theme";
+    private static final int REQUEST_CODE = 1;
+
+    Button buttonOk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +24,16 @@ public class ChangeThemeActivity extends AppCompatActivity implements View.OnCli
         setTheme(getAppTheme());
 
         setContentView(R.layout.activity_change_theme);
+
+        buttonOk = findViewById(R.id.buttonOk);
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChangeThemeActivity.this, MainActivity.class);
+                intent.putExtra(PREF_THEME, getAppTheme());
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
 
         ((RadioButton) findViewById(R.id.radioButtonMaterialDefault)).setOnClickListener(this);
         ((RadioButton) findViewById(R.id.radioButtonMaterialBlue)).setOnClickListener(this);

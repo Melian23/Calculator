@@ -34,8 +34,7 @@
             <Button
                 android:id="@+id/reset"
                 android:onClick="resetBTN"
-                android:text="@string/reset"
-                android:textSize="30sp" />
+                android:text="@string/reset" />
 
             <Button
                 android:id="@+id/clear"
@@ -135,15 +134,9 @@
         </GridLayout>
 
         <Button
-            android:id="@+id/theme_night"
+            android:id="@+id/btn_theme"
             style="@style/ButtonNight"
             android:text="@string/night" />
-
-        <Button
-            android:id="@+id/theme_day"
-            style="@style/ButtonNight"
-            android:text="@string/day"
-            android:layout_marginStart="200dp"/>
 
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
