@@ -28,11 +28,11 @@
 
     <style name="ButtonNight">
         <item name="android:backgroundTint">@color/light_grey</item>
-        <item name="android:layout_marginTop">370dp</item>
+        <item name="android:layout_marginTop">350dp</item>
         <item name="android:layout_marginBottom">0dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">300dp</item>
+        <item name="android:layout_marginStart">250dp</item>
         <item name="android:shape">rectangle</item>
         <item name="cornerRadius">200dp</item>
         <item name="android:color">@color/dark_green</item>
@@ -41,9 +41,9 @@
     </style>
 
     <style name="MyTextStyle">
-        <item name="android:layout_marginHorizontal">20dp</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:ems">50</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">-50dp</item>
         <item name="android:gravity">end</item>
         <item name="android:layout_marginBottom">-50dp</item>
@@ -62,6 +62,60 @@
         <item name="android:layout_marginBottom">-50dp</item>
         <item name="android:textSize">@dimen/display_size</item>
         <item name="editTextColor">@color/platinum</item>
+    </style>
+
+    <style name="myThemeGreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/green_500</item>
+        <item name="colorPrimary">@color/green_600</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/green_100</item>
+        <item name="colorOnPrimaryContainer">@color/green_900</item>
+        <item name="colorPrimaryInverse">@color/green_200</item>
+        <item name="colorSecondary">@color/green_600</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/green_100</item>
+        <item name="colorOnSecondaryContainer">@color/green_900</item>
+        <item name="colorTertiary">@color/green_600</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/green_100</item>
+        <item name="colorOnTertiaryContainer">@color/green_900</item>
+        <item name="android:statusBarColor">@color/green_800</item>
+    </style>
+
+    <style name="myThemeRed" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/red_500</item>
+        <item name="colorPrimary">@color/red_600</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/red_100</item>
+        <item name="colorOnPrimaryContainer">@color/red_900</item>
+        <item name="colorPrimaryInverse">@color/red_200</item>
+        <item name="colorSecondary">@color/red_600</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/red_100</item>
+        <item name="colorOnSecondaryContainer">@color/red_900</item>
+        <item name="colorTertiary">@color/red_600</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/red_100</item>
+        <item name="colorOnTertiaryContainer">@color/red_900</item>
+        <item name="android:statusBarColor">@color/red_800</item>
+    </style>
+
+    <style name="myThemeBlue" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/blue_500</item>
+        <item name="colorPrimary">@color/blue_600</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/blue_100</item>
+        <item name="colorOnPrimaryContainer">@color/blue_900</item>
+        <item name="colorPrimaryInverse">@color/blue_200</item>
+        <item name="colorSecondary">@color/blue_500</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/blue_100</item>
+        <item name="colorOnSecondaryContainer">@color/blue_900</item>
+        <item name="colorTertiary">@color/blue_600</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/blue_100</item>
+        <item name="colorOnTertiaryContainer">@color/blue_800</item>
+        <item name="android:statusBarColor">@color/blue_900</item>
     </style>
 
 </resources>

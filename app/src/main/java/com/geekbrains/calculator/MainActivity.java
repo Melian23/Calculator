@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
+       /* SharedPreferences sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
 
         String theme = sharedPreferences.getString(THEME_KEY, THEME_DAY);  // по умолчанию для первого запуска светлая тема
 // выбираем сохраненную тему ранее
@@ -39,9 +40,13 @@ public class MainActivity extends AppCompatActivity {
                 THEME_NIGHT:
                 setTheme(R.style.Theme_Calculator_V2);
                 break;
-        }
+        }*/
 
         setContentView(R.layout.activity_main);
+
+        Button theme_night;
+        findViewById(R.id.theme_night);
+
 
         display = findViewById(R.id.text);
         display.setShowSoftInputOnFocus(false); // метод отключения всплывающей клавиатуры при нажатии на дисплей (false)
@@ -55,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+/*
         // выбор светлой или темной темы:
         findViewById(R.id.theme_day).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                         .apply();
                 recreate();
             }
-        });
+        });*/
     }
 
     // метод обновления текста на дисплее
