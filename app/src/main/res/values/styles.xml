@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalcButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:shape">rectangle</item>
+        <item name="android:color">@color/dark_green</item>
+        <item name="android:backgroundTint">@color/dark_green</item>
+        <item name="cornerRadius">40dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/special_elite</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="CalcButton.V2" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:shape">rectangle</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:backgroundTint">@color/platinum</item>
+        <item name="cornerRadius">40dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/special_elite</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="ButtonNight">
+        <item name="android:backgroundTint">@color/light_grey</item>
+        <item name="android:layout_marginTop">370dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">300dp</item>
+        <item name="android:shape">rectangle</item>
+        <item name="cornerRadius">200dp</item>
+        <item name="android:color">@color/dark_green</item>
+        <item name="android:fontFamily">@font/special_elite</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MyTextStyle">
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_marginTop">-50dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_marginBottom">-50dp</item>
+        <item name="android:backgroundTint">@color/dark_green</item>
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textColorHint">@color/dark_green</item>
+        <item name="android:textSize">@dimen/display_size</item>
+    </style>
+
+    <style name="MyTextStyle.V2">
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_marginTop">-50dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_marginBottom">-50dp</item>
+        <item name="android:textSize">@dimen/display_size</item>
+        <item name="editTextColor">@color/platinum</item>
+    </style>
+
+</resources>

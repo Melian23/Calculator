@@ -4,39 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_g7aace4f2a_1920"
     tools:context=".MainActivity">
 
     <EditText
-
         android:id="@+id/text"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="-50dp"
-        android:autofillHints="username"
-        android:gravity="end"
         android:text="@string/text"
-        android:backgroundTint="@color/dark_green"
-        android:textColor="@color/dark_green"
-        android:textColorHint="@color/dark_green"
-        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/MyTextStyle" />
 
-    <include
+    <FrameLayout
         android:id="@+id/button"
-        layout="@layout/button"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/text"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/text"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text">
 
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:columnCount="4">
+
+            <Button
+                android:id="@+id/reset"
+                android:onClick="resetBTN"
+                android:text="@string/reset"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/clear"
+                android:onClick="clearBTN"
+                android:text="@string/clear" />
+
+            <Button
+                android:id="@+id/percent"
+                android:onClick="percentBTN"
+                android:text="@string/percent" />
+
+            <Button
+                android:id="@+id/div"
+                android:onClick="divBTN"
+                android:text="@string/div" />
+
+            <Button
+                android:id="@+id/seven"
+                android:onClick="sevenBTN"
+                android:text="@string/seven" />
+
+            <Button
+                android:id="@+id/eight"
+                android:onClick="eightBTN"
+                android:text="@string/eight" />
+
+            <Button
+                android:id="@+id/nine"
+                android:onClick="nineBTN"
+                android:text="@string/nine" />
+
+            <Button
+                android:id="@+id/mult"
+                android:onClick="multBTN"
+                android:text="@string/mult" />
+
+            <Button
+                android:id="@+id/four"
+                android:onClick="fourBTN"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/five"
+                android:onClick="fiveBTN"
+                android:text="@string/five" />
+
+            <Button
+                android:id="@+id/six"
+                android:onClick="sixBTN"
+                android:text="@string/six" />
+
+            <Button
+                android:id="@+id/minus"
+                android:onClick="minusBTN"
+                android:text="@string/minus" />
+
+            <Button
+                android:id="@+id/one"
+                android:onClick="oneBTN"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/two"
+                android:onClick="twoBTN"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/three"
+                android:onClick="threeBTN"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/plus"
+                android:onClick="plusBTN"
+                android:text="@string/plus" />
+
+            <Button
+                android:id="@+id/plus_minus"
+                android:onClick="plusMinusBTN"
+                android:text="@string/plus_minus" />
+
+            <Button
+                android:id="@+id/zero"
+                android:onClick="zeroBTN"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/dot"
+                android:onClick="dotBTN"
+                android:text="@string/dot" />
+
+            <Button
+                android:id="@+id/result"
+                android:onClick="equalBTN"
+                android:text="@string/result" />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/theme_night"
+            style="@style/ButtonNight"
+            android:text="@string/night" />
+
+        <Button
+            android:id="@+id/theme_day"
+            style="@style/ButtonNight"
+            android:text="@string/day"
+            android:layout_marginStart="200dp"/>
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
