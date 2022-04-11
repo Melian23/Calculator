@@ -1,9 +1,5 @@
 package com.geekbrains.calculator;
 
-/***
- * ланшафтная ориентация калькулятора с сохранением состояния
- */
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -18,9 +14,6 @@ import org.mariuszgromada.math.mxparser.Expression;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String THEME_KEY = "THEME_KEY";
-    private static final String THEME_DEFAULT = "THEME_NIGHT";
-    private static final String THEME_DAY = "THEME_DAY";
     private static final String PREF_NAME = "key";
     private static final String PREF_THEME = "key_theme";
     private EditText display;
@@ -49,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         int changeTheme = extras.getInt(ChangeThemeActivity.PREF_THEME);
         if (extras != null) {
-
             SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt(PREF_THEME, changeTheme);
@@ -62,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.putExtra(PREF_NAME, PREF_THEME);
-              MainActivity.this.setResult(RESULT_OK);
-              finish();
+                MainActivity.this.setResult(RESULT_OK);
+                finish();
             }
         });
 
@@ -85,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         return sharedPreferences.getInt(PREF_THEME, R.style.Theme_Calculator);
     }
-
 /*
         // выбор светлой или темной темы:
         findViewById(R.id.theme_day).setOnClickListener(new View.OnClickListener() {

@@ -32,113 +32,113 @@
             android:layout_marginStart="@dimen/gridLayout_marginStart"
             android:columnCount="4">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/reset"
                 android:layout_marginRight="20dp"
                 android:onClick="resetBTN"
                 android:text="@string/reset" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/clear"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginRight="20dp"
                 android:onClick="clearBTN"
                 android:text="@string/clear" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/percent"
                 android:layout_marginRight="20dp"
                 android:onClick="percentBTN"
                 android:text="@string/percent" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/div"
                 android:onClick="divBTN"
                 android:text="@string/div" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/seven"
                 android:onClick="sevenBTN"
                 android:text="@string/seven" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/eight"
                 android:onClick="eightBTN"
                 android:text="@string/eight" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/nine"
                 android:onClick="nineBTN"
                 android:text="@string/nine" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/mult"
                 android:onClick="multBTN"
                 android:text="@string/mult" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/four"
                 android:onClick="fourBTN"
                 android:text="@string/four" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/five"
                 android:onClick="fiveBTN"
                 android:text="@string/five" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/six"
                 android:onClick="sixBTN"
                 android:text="@string/six" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/minus"
                 android:onClick="minusBTN"
                 android:text="@string/minus" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/one"
                 android:onClick="oneBTN"
                 android:text="@string/one" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/two"
                 android:onClick="twoBTN"
                 android:text="@string/two" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/three"
                 android:onClick="threeBTN"
                 android:text="@string/three" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/plus"
                 android:onClick="plusBTN"
                 android:text="@string/plus" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/plus_minus"
                 android:onClick="plusMinusBTN"
                 android:text="@string/plus_minus" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zero"
                 android:onClick="zeroBTN"
                 android:text="@string/zero" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/dot"
                 android:onClick="dotBTN"
                 android:text="@string/dot" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/result"
                 android:onClick="equalBTN"
                 android:text="@string/result" />
 
         </GridLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_theme"
             style="@style/ButtonNight.land"
             android:text="@string/night" />
