@@ -17,8 +17,9 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:shape">rectangle</item>
         <item name="cornerRadius">40dp</item>
-        <item name="android:layout_margin">10dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="paddingBottomNoButtons">0dp</item>
+        <item name="android:layout_height">50dp</item>
         <item name="android:fontFamily">@font/special_elite</item>
         <item name="android:textSize">@dimen/calc_button_android_text_size</item>
     </style>
@@ -88,7 +89,7 @@
 
     </style>
 
-    <style name="myThemeGreen" >
+    <style name="myThemeGreen">
         <item name="android:navigationBarColor">@color/green_500</item>
         <item name="colorPrimary">@color/green_600</item>
         <item name="colorOnPrimary">@color/white</item>
