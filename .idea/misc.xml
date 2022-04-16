@@ -3,14 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/drawable-night/drawable.xml" value="0.164" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2095" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/drawable/button_shape.xml" value="0.2095" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/drawable/ic_baseline_brightness_1_24.xml" value="0.2095" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2095" />
+        <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/font/special_elite.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout-land/activity_change_theme.xml" value="0.264" />
+        <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout-land/activity_main.xml" value="0.45161290322580644" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout-night/activity_main.xml" value="0.16822916666666668" />
+        <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout/activity_change_theme.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout/activity_selecting_theme.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout/activity_two.xml" value="0.121875" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout/button.xml" value="0.2" />
+        <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout/change_theme_activity.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout/ddfs.xml" value="0.14492753623188406" />
         <entry key="..\:/Users/79607/Desktop/STUDY/Calculator2/app/src/main/res/layout/entry_field.xml" value="0.2210144927536232" />
       </map>

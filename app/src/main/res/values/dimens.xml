@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="display_size">50sp</dimen>
+    <dimen name="text_size">40sp</dimen>
+    <dimen name="gridLayout_marginStart">30dp</dimen>
+    <dimen name="frameLayout_layout_marginTop">180dp</dimen>
+    <dimen name="frameLayout_layout">0dp</dimen>
+    <dimen name="button_night_text_size">15sp</dimen>
+    <dimen name="calc_button_android_text_size">30sp</dimen>
 </resources>

@@ -1,15 +1,11 @@
 package com.geekbrains.calculator;
 
-/***
- * TODO:
- * число показывалось без точки если оно целое
- * ланшафтная ориентация калькулятора с сохранением состояния
- */
-
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,30 +14,50 @@ import org.mariuszgromada.math.mxparser.Expression;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String THEME_KEY = "THEME_KEY";
-    private static final String THEME_NIGHT = "THEME_NIGHT";
-    private static final String THEME_DAY = "THEME_DAY";
+    private static final String PREF_NAME = "key";
+    private static final String PREF_THEME = "key_theme";
     private EditText display;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         SharedPreferences sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
 
-        String theme = sharedPreferences.getString(THEME_KEY, THEME_DAY);  // по умолчанию для первого запуска светлая тема
+        String theme = sharedPreferences.getString(ChangeThemeActivity.PREF_THEME, THEME_DEFAULT);  // по умолчанию для первого запуска светлая тема
 // выбираем сохраненную тему ранее
         switch (theme) {
             case THEME_DAY:
-                setTheme(R.style.Theme_Calculator);
-                break;
-            default:
-                THEME_NIGHT:
                 setTheme(R.style.Theme_Calculator_V2);
                 break;
+            default:
+                THEME_DEFAULT:
+                setTheme(R.style.Theme_Calculator);
+                break;
+        }*/
+
+        setTheme(getAppTheme());
+        setContentView(R.layout.activity_main);
+
+        Bundle extras = getIntent().getExtras();
+        int changeTheme = extras.getInt(ChangeThemeActivity.PREF_THEME);
+        if (extras != null) {
+            SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt(PREF_THEME, changeTheme);
+            editor.apply();
         }
 
-        setContentView(R.layout.activity_main);
+        Button btn_theme = findViewById(R.id.btn_theme);
+        btn_theme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.putExtra(PREF_NAME, PREF_THEME);
+                MainActivity.this.setResult(RESULT_OK);
+                finish();
+            }
+        });
 
         display = findViewById(R.id.text);
         display.setShowSoftInputOnFocus(false); // метод отключения всплывающей клавиатуры при нажатии на дисплей (false)
@@ -55,7 +71,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
 
+    protected int getAppTheme() {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        return sharedPreferences.getInt(PREF_THEME, R.style.Theme_Calculator);
+    }
+/*
         // выбор светлой или темной темы:
         findViewById(R.id.theme_day).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,8 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         .apply();
                 recreate();
             }
-        });
-    }
+        });*/
 
     // метод обновления текста на дисплее
     private void updateText(String addStr) {
@@ -110,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
             updateText("0");
         }
     }
+
     public void oneBTN(View view) {
         updateText("1");
     }
